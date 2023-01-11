@@ -36,6 +36,12 @@ public class AvaliacaoAMQPConfiguration {
                 .nonDurable("pagamentos.detalhes-avaliacao")
                 .build();
     }
+    @Bean
+    public Queue filaDetalhesAvaliacao2() {
+        return QueueBuilder
+                .nonDurable("pagamentos.detalhes-avaliacao2")
+                .build();
+    }
 
     @Bean
     public FanoutExchange fanoutExchange() {
